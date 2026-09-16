@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rectangle 47. Setup del workshop</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="setup.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="nav">
+    <a class="brand" href="../">Rectangle 47</a>
+    <nav class="links">
+      <a class="link" href="#prima">Prima</a>
+      <a class="link" href="#punto-zero">Punto zero</a>
+      <a class="link" href="#metodo">Il metodo</a>
+      <a class="link" href="#dopo">Dopo</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="headline">Scrivere per un lettore che non perdona.</h1>
+    <p class="lead">Workshop al PUG Bari, 20 settembre 2026. Questa pagina è tutto quello che serve, prima e durante. Tenetela aperta sul telefono o in una terza tab.</p>
+  </section>
+
+  <section class="setup-block" id="prima">
+    <h2 class="title">Prima del 20</h2>
+    <p class="body">Due account gratuiti, creati con la stessa email, sullo stesso browser del laptop che porterete. Niente app desktop, niente piano a pagamento.</p>
+    <ol class="step-list">
+      <li class="step">
+        <h3 class="step-title">Un account Figma</h3>
+        <p class="step-body">Su figma.com, piano Starter. Se ne avete già uno va bene, purché ricordiate con quale email.</p>
+      </li>
+      <li class="step">
+        <h3 class="step-title">Un account Claude</h3>
+        <p class="step-body">Su claude.ai, piano Free. Chi ha già un account Pro lo usa, e nella coppia lavora sul suo.</p>
+      </li>
+      <li class="step">
+        <h3 class="step-title">Un laptop</h3>
+        <p class="step-body">Con un browser aggiornato. Il collegamento tra Figma e Claude lo facciamo insieme in aula, non serve farlo prima.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="setup-block" id="punto-zero">
+    <h2 class="title">Punto zero, in aula</h2>
+    <p class="body">Cinque passi guidati, quindici minuti. Ogni passo ha un'azione e un controllo. Se il controllo non passa, alzate la mano.</p>
+    <ol class="step-list">
+
+      <li class="step">
+        <h3 class="step-title">0.1 Login</h3>
+        <p class="step-body">Aprite figma.com e claude.ai nello stesso browser, con i due account creati a casa. Figma prima di Claude, altrimenti il connettore prende l'account sbagliato.</p>
+        <p class="step-check">Controllo. Due tab aperte, le email giuste in alto a destra.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">0.2 Connettore</h3>
+        <p class="step-body">Su claude.ai andate in Settings > Connectors, cercate Figma e premete Connect. Nella finestra di Figma premete Allow access.</p>
+        <p class="step-check">Controllo. Figma compare tra i connettori con lo stato Connected. Se compare un account diverso, Disconnect, login su Figma con l'account giusto, e di nuovo Connect.</p>
+        <p class="step-note">Quello che avete attivato si chiama connettore. Permette a Claude di usare gli strumenti di Figma, leggere un file, rinominare un layer, creare una variabile, come se fossero suoi. Esiste anche un altro modo, il Dev Mode MCP server nell'app desktop di Figma. Richiede un piano a pagamento e legge soltanto. Oggi non lo usiamo.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">0.3 Verifica dell'account</h3>
+        <p class="step-body">Nuova chat su Claude. Incollate questo prompt.</p>
+        <div class="prompt">
+          <pre class="prompt-text">Con quale account Figma sei collegato?</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+        <p class="step-check">Controllo. Claude risponde con l'email del vostro account Figma.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">0.4 Copia del file</h3>
+        <p class="step-body">Aprite il file su Figma Community e premete Open in Figma. Il file si apre nei vostri Drafts. Copiate l'URL dalla barra del browser, vi serve per tutti i prompt.</p>
+        <p class="step-action"><a class="button button-primary" href="[LINK COMMUNITY]">Apri il file su Figma Community</a></p>
+        <p class="step-check">Controllo. L'URL contiene un ID diverso da quello proiettato. Il file ha due pagine, "Rectangle 47" e "Controllo". La pagina Controllo non si tocca per tutto il workshop, serve alla fine.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">0.5 Prova di lettura</h3>
+        <p class="step-body">Nella stessa chat, con il vostro URL al posto di [URL].</p>
+        <div class="prompt">
+          <pre class="prompt-text">Nella pagina "Rectangle 47" del file [URL] elenca tutti i layer con il loro nome. Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+        <p class="step-check">Controllo. Nell'elenco compare Rectangle 47.</p>
+        <p class="step-note">L'ultima riga resta in tutti i prompt di oggi. Alcuni strumenti di lettura di Figma hanno un limite mensile sui piani gratuiti, e quella riga li evita. Non serve capirla, serve lasciarla.</p>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="setup-block" id="metodo">
+    <h2 class="title">Il metodo</h2>
+    <p class="body">Tre mosse. Decidi le variabili, dai i nomi, fai leggere. I prompt sono lo strumento, le scelte sono vostre. Sostituite [URL] con l'indirizzo della vostra copia.</p>
+    <p class="body"><a class="link-inline" href="il-metodo.md">Il file di testo con tutti i prompt</a>, da tenere anche dopo.</p>
+
+    <ol class="step-list">
+
+      <li class="step">
+        <h3 class="step-title">1 Variabili</h3>
+        <p class="step-body">I cinque nomi sono dati. I valori li scegliete voi, prima di lanciare il prompt. Una palette neutra e un accento. Il piano Starter permette una sola modalità, quindi niente light e dark.</p>
+        <div class="prompt">
+          <pre class="prompt-text">Nel file [URL] crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità. Dentro metti cinque variabili colore con questi nomi e questi valori. surface/primary [valore], surface/secondary [valore], text/primary [valore], text/secondary [valore], accent [valore]. Poi lega i fill dei layer della pagina "Rectangle 47" alle variabili che hai creato, in base al ruolo di ogni layer. Non toccare la pagina "Controllo". Non spiegarmi come farlo a mano, eseguilo. Alla fine dimmi quali variabili hai creato e quanti fill hai legato. Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+        <p class="step-note">Se preferite lasciare i valori a Claude, sostituite l'elenco con "con valori a tua scelta in una palette neutra".</p>
+        <p class="step-check">Controllo. In Local variables c'è la collezione "color" con cinque variabili. I fill della card puntano alle variabili.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">2 Nomi</h3>
+        <p class="step-body">La convenzione è componente / variante / stato. Per esempio "card / product / default", "button / primary / default". Prima di lanciare il prompt scrivete su un foglio i vostri cinque nomi.</p>
+        <div class="prompt">
+          <pre class="prompt-text">Nella pagina "Rectangle 47" del file [URL] rinomina tutti i layer che hanno ancora un nome di default, tipo Rectangle, Frame, Text, Ellipse, seguendo la convenzione "componente / variante / stato", deducendo il ruolo di ogni layer dalla sua posizione, dimensione e contenuto. Dove non riesci a dedurlo con sicurezza, lascia il nome com'è e dimmi perché. Non toccare la pagina "Controllo". Esegui direttamente con gli strumenti Figma. Alla fine elenca i layer rinominati con vecchio e nuovo nome. Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+        <p class="step-check">Controllo. Nel pannello dei layer della pagina Rectangle 47 nessun nome di default.</p>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">3A La prova del lettore, pagina sistemata</h3>
+        <p class="step-body">Nella stessa chat di lavoro.</p>
+        <div class="prompt">
+          <pre class="prompt-text">Nella pagina "Rectangle 47" del file [URL] scrivi l'HTML e il CSS della card prodotto. Usa i nomi dei layer come nomi delle classi e le variabili del file come custom property CSS. Non aggiungere nulla che non sia nel file. Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+      </li>
+
+      <li class="step">
+        <h3 class="step-title">3B La prova del lettore, pagina di controllo</h3>
+        <p class="step-body">In una chat nuova, perché nella prima Claude ha già in memoria i nomi che ha appena dato.</p>
+        <div class="prompt">
+          <pre class="prompt-text">Nella pagina "Controllo" del file [URL] scrivi l'HTML e il CSS della card prodotto. Usa i nomi dei layer come nomi delle classi e le variabili del file come custom property CSS. Non aggiungere nulla che non sia nel file. Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
+          <button class="button button-secondary prompt-copy" type="button">Copia</button>
+        </div>
+        <p class="step-check">Confrontate i due codici. Guardate i nomi delle classi, i colori, la struttura.</p>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="band-quote">
+    <p class="quote">Il valore non è nel codice. È nel criterio.</p>
+    <p class="source">Rectangle 47. Il lettore che non perdona</p>
+  </section>
+
+  <section class="setup-block" id="dopo">
+    <h2 class="title">Dopo</h2>
+    <p class="body">Il metodo vale su qualunque file, con qualunque lettore. Le tre mosse restano le stesse, cambiano solo i nomi che scegliete.</p>
+    <ol class="step-list">
+      <li class="step">
+        <h3 class="step-title">La skill recap</h3>
+        <p class="step-body">Chiude una chat con un documento di passaggio, da portare nella chat successiva. Su claude.ai si installa da Customize > Skills > Add.</p>
+        <p class="step-action"><a class="button button-secondary" href="https://github.com/italosan/claude-skills">github.com/italosan/claude-skills</a></p>
+      </li>
+      <li class="step">
+        <h3 class="step-title">La landing e il suo codice</h3>
+        <p class="step-body">La pagina da cui siamo partiti, con le stesse parole del file dentro il CSS.</p>
+        <p class="step-action"><a class="button button-secondary" href="https://github.com/italosan/rectangle-47">github.com/italosan/rectangle-47</a></p>
+      </li>
+    </ol>
+  </section>
+
+  <footer class="footer">
+    <span class="copy">Rectangle 47. PUG Bari, 20 settembre 2026</span>
+    <span class="author">Italo Sannino, italosannino.com</span>
+  </footer>
+
+</div>
+
+<script>
+document.querySelectorAll(".prompt-copy").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var text = button.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(function () {
+      button.textContent = "Copiato";
+      setTimeout(function () { button.textContent = "Copia"; }, 1500);
+    });
+  });
+});
+</script>
+</body>
+</html>
