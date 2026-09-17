@@ -1,5 +1,8 @@
 /* Setup page. Only custom properties from style.css, no new values. */
 
+html { scroll-padding-top: calc(var(--space-xxl) + var(--space-s)); }
+
+.nav { position: sticky; top: 0; background: var(--surface-primary); z-index: 1; }
 .nav .brand { text-decoration: none; color: var(--text-primary); }
 
 .setup-block { display: flex; flex-direction: column; gap: var(--space-l); padding: var(--space-xxl); border-top: 1px solid var(--border-default); }
@@ -21,6 +24,7 @@
 .prompt-copy { align-self: flex-start; }
 
 @media (max-width: 900px) {
+  html { scroll-padding-top: calc(var(--space-xxl) + var(--space-l)); }
   .setup-block { padding: var(--space-xl) var(--space-l); }
   .step { padding: var(--space-l); }
 }
