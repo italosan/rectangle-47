@@ -10,22 +10,28 @@ Un design system ha quattro cardini, variables, naming, components, auto layout.
 
 ## Come si usano
 
+- I prompt sono sei e si chiamano da P1 a P6, nell'ordine in cui si lanciano. Sulle slide il badge rosso "Azione" dice quando tocca a voi e quale prompt copiare.
 - L'URL del file va solo nel primo prompt di ogni chat. È l'indirizzo della tua copia, quello che leggi nella barra del browser con il file aperto in Drafts, dopo Open in Figma.
-- I prompt da 0.3 a 3A vanno nella stessa chat. Il 3B in una chat nuova, e lì l'URL va rimesso. Se per qualunque motivo apri una chat nuova, rimetti l'URL nel primo prompt.
-- Ogni prompt indica la pagina su cui lavorare. La pagina "Controllo" non si tocca fino all'esercizio 3.
+- I prompt da P1 a P5 vanno nella stessa chat. Il P6 in una chat nuova, e lì l'URL va rimesso. Se per qualunque motivo apri una chat nuova, rimetti l'URL nel primo prompt.
+- Ogni prompt indica la pagina su cui lavorare. La pagina "Controllo" non si tocca fino al P6.
 - L'ultima riga di ogni prompt resta sempre. Sul piano gratuito di Figma il connettore ha venti chiamate al mese, tutte le chiamate contano, e quella riga tiene Claude sugli strumenti che ne consumano meno. Il giro del workshop ne usa tra sei e nove. Usa un account Figma nuovo o mai collegato a Claude prima.
 - Se Claude risponde che non ha accesso in modifica al file, l'URL è quello sbagliato. Prendilo dalla barra del file aperto in Drafts, non dalla pagina Community.
 - Ogni prompt è scritto a blocchi. Il file e il compito, cosa creare, cosa non toccare, le istruzioni finali, la riga sugli strumenti.
+- I prompt della demo di Italo stanno in una pagina a parte, rectangle-47.pages.dev/demo. Non lanciateli sul piano gratuito, da soli consumano le chiamate di un mese.
 
 ## Punto zero
 
-### 0.3 Verifica dell'account
+### P1 Verifica dell'account
+
+In una chat nuova.
 
 > Con quale account Figma sei collegato? Dimmi nome e email usando lo strumento whoami.
 
 Deve rispondere con il tuo nome e la tua email di Figma. Se risponde con un altro nome, il connettore è collegato all'account sbagliato.
 
-### 0.5 Prova di lettura
+### P2 Prova di lettura
+
+Nella stessa chat, con il tuo URL.
 
 > Nella pagina "Rectangle 47" del file [URL] elenca tutti i layer con il loro nome.
 >
@@ -35,29 +41,33 @@ Se risponde con Group 12, Rectangle 47, Frame 3 copy 2 ed Ellipse 1, il collegam
 
 ## Prima mossa. Decidi le variabili
 
-Un design system si costruisce in due modi. Con calma, scegliendo ogni colore, spazio e carattere a mano. O in fretta, dando a Claude un brief e raffinando dopo. In aula si fa la seconda. Il brief è vostro, tre parole di tono e un vincolo, sul foglio, prima del prompt.
-
 I cinque nomi sono dati. Nessuno dice un colore, tutti dicono un ruolo. Il rosso può diventare blu domani e il nome resta giusto. La barra fa gruppo nel pannello.
 
-### 1 Variabili, con il brief
+In aula anche i cinque valori sono dati, sono quelli della landing. È una scelta di tempo. Meno copia e incolla, meno pasticci nel prompt, meno tempi morti. Nel lavoro vero i valori sono la parte che decidete voi, e le due strade per farlo stanno qui sotto.
+
+### P3 Variabili
 
 > Nello stesso file crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità.
 >
-> Dentro metti cinque variabili colore con questi nomi. surface/primary, surface/secondary, text/primary, text/secondary, accent. I valori li scegli tu seguendo questo brief. [BRIEF, per esempio "neutro caldo, accento rosso, contrasto alto"]. Rispetta il contrasto minimo tra testo e sfondo.
+> Dentro metti cinque variabili colore con questi nomi e questi valori. surface/primary #FFFFFF, surface/secondary #EFEAE1, text/primary #1A1917, text/secondary #6B675F, accent #D63A0E.
 >
 > Poi lega i fill dei layer della pagina "Rectangle 47" alle variabili che hai creato, in base al ruolo di ogni layer. Non toccare la pagina "Controllo".
 >
-> Non spiegarmi come farlo a mano, eseguilo in una sola chiamata. Alla fine dimmi quali variabili hai creato con i loro valori e quanti fill hai legato.
+> Non spiegarmi come farlo a mano, eseguilo in una sola chiamata. Alla fine dimmi quali variabili hai creato con i loro valori e quanti fill hai legato. Se un fill non ha una variabile adatta, lascialo com'è e dimmelo.
 >
 > Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
 
-### 1 Variabili, con i valori scelti a mano
-
-La strada lunga, per quando c'è tempo. Stesso prompt, con il secondo blocco così.
-
-> Dentro metti cinque variabili colore con questi nomi e questi valori. surface/primary [valore], surface/secondary [valore], text/primary [valore], text/secondary [valore], accent [valore].
-
 Tre controlli. Pannello Local variables, collezione color con cinque nomi. Fill del rettangolo grande della card, un nome al posto del numero. Pagina Controllo, rimasta com'era.
+
+### P3 in studio, con un brief
+
+La strada corta quando i valori non ci sono ancora. Tre parole di tono e un vincolo. Stesso prompt, con il secondo blocco così.
+
+> Dentro metti cinque variabili colore con questi nomi. surface/primary, surface/secondary, text/primary, text/secondary, accent. I valori li scegli tu seguendo questo brief. [BRIEF, per esempio "neutro caldo, accento rosso, contrasto alto"]. Rispetta il contrasto minimo tra testo e sfondo.
+
+### P3 in studio, con i valori scelti a mano
+
+La strada lunga, per quando c'è tempo. È il P3 dell'aula, con i vostri valori al posto di quelli della landing.
 
 ## Seconda mossa. Dai i nomi
 
@@ -65,7 +75,7 @@ La convenzione è componente / variante / stato, in inglese come le variabili. P
 
 Un testo che si chiama come quello che c'è scritto non ha un nome. Prima di lanciare il prompt scrivete sul foglio il nome che dareste a Group 12, Rectangle 47, Rectangle 3, Frame 3 copy 2 ed Ellipse 1. Non serve che siano giusti, serve che siano vostri.
 
-### 2 Nomi
+### P4 Nomi
 
 > Nello stesso file, nella pagina "Rectangle 47", rinomina tutti i layer che hanno ancora un nome di default, tipo Rectangle, Frame, Text, Ellipse, Group, compresi i layer di testo il cui nome coincide con il contenuto, che vanno chiamati per ruolo, per esempio title, description, price, label.
 >
@@ -81,7 +91,7 @@ Confrontate il foglio con la tabella di Claude, un layer alla volta. Guardate co
 
 Stesso prompt, due pagine, due chat. Una sistemata, una no. Due chat perché il lettore non deve ricordare.
 
-### 3A La prova del lettore, pagina sistemata
+### P5 La prova del lettore, pagina sistemata
 
 Nella stessa chat di lavoro.
 
@@ -89,7 +99,7 @@ Nella stessa chat di lavoro.
 >
 > Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
 
-### 3B La prova del lettore, pagina di controllo
+### P6 La prova del lettore, pagina di controllo
 
 In una chat nuova, con l'URL.
 
@@ -99,17 +109,17 @@ In una chat nuova, con l'URL.
 
 Confrontate i due codici. Non serve leggerli, servono le parole.
 
-- Le classi. Nel 3A card, button, price. Nel 3B group-12, rectangle-47, frame-3-copy-2.
-- I colori. Nel 3A var(--accent). Nel 3B un numero esadecimale, ripetuto ogni volta che serve.
-- Il lavoro dopo. Con il 3A un colore si cambia in un posto solo. Con il 3B si cerca in nove.
+- Le classi. Nel P5 card, button, price. Nel P6 group-12, rectangle-47, frame-3-copy-2.
+- I colori. Nel P5 var(--accent). Nel P6 un numero esadecimale, ripetuto ogni volta che serve.
+- Il lavoro dopo. Con il P5 un colore si cambia in un posto solo. Con il P6 si cerca in nove.
 
 Il secondo codice non è sbagliato. È fedele. Ha copiato esattamente quello che c'era, e quello che c'era non diceva niente.
 
 ## La quarta mossa, per casa
 
-L'auto layout. Un file senza auto layout dice dove sta una cosa, non come sta rispetto alle altre, e il lettore copia le coordinate. In aula non c'è tempo. Nella chat di lavoro, dopo il 3A.
+L'auto layout. Un file senza auto layout dice dove sta una cosa, non come sta rispetto alle altre, e il lettore copia le coordinate. In aula non c'è tempo. Nella chat di lavoro, dopo il P5.
 
-### 4 Struttura
+### P7 Struttura
 
 > Nello stesso file, nella pagina "Rectangle 47", metti in auto layout la card prodotto e i suoi contenitori.
 >
@@ -119,49 +129,8 @@ L'auto layout. Un file senza auto layout dice dove sta una cosa, non come sta ri
 >
 > Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
 
-## Cosa ha fatto Italo
-
-La demo in aula, tre atti sulla landing intera, stesso metodo della card. Questi prompt richiedono un file con un design system già fatto, come quello della landing, github.com/italosan/rectangle-47. Vanno lanciati con l'URL del file, in una chat nuova. Tempi misurati nel dry run del 17 settembre con Fable.
-
-### R Il file caotico riportato a code-ready
-
-Variabili, nomi e auto layout sulla copia caotica della landing. Due minuti e mezzo.
-
-> Nel file [URL] duplica la pagina "Chaos" in una pagina nuova chiamata "Rework" e sistemala usando gli strumenti Figma, senza toccare le altre pagine.
->
-> Tre cose. Lega ogni fill e ogni filetto alle variabili colore del file e applica a ogni testo lo stile di testo corrispondente, scegliendo in base a ruolo, corpo e peso. Rinomina ogni layer con nome di default seguendo la convenzione "componente / variante / stato", in inglese, con i nomi già usati nella pagina "Home" dove il ruolo è lo stesso. Metti in auto layout i contenitori che hanno figli in relazione tra loro, con spazi e padding legati alle variabili spazio del file.
->
-> Il risultato deve restare identico a "Home" pixel per pixel. Non spiegarmi come farlo, eseguilo. Alla fine dimmi quanti fill hai legato, quanti stili applicato, quanti layer rinominato, quanti frame messi in auto layout e quante chiamate hai fatto.
->
-> Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
-
-### S La styleguide, letta dal design system
-
-Nessun colore, spazio o stile detto a Claude, solo "quelli che ci sono". Un minuto e mezzo, cinque chiamate.
-
-> Nel file [URL] crea una pagina nuova chiamata "Styleguide" e costruiscila usando gli strumenti Figma.
->
-> Dentro un frame 1440 con auto layout, quattro sezioni in colonna, una sotto l'altra. Prima sezione, tutte le variabili colore del file, ogni variabile con un campione quadrato e sotto il suo nome. Seconda sezione, le variabili spazio, ogni variabile con una barra alta quanto il suo valore e sotto il nome. Terza sezione, gli stili di testo, ogni stile con una riga di esempio nello stile stesso e sotto il nome. Quarta sezione, un'istanza di ogni componente della pagina "Components", con sotto il nome del componente.
->
-> Usa solo variabili, stili e componenti che esistono già nel file. Nessun colore, spazio o carattere scritto a mano. Non toccare le altre pagine.
->
-> Non spiegarmi come farlo, eseguilo. Alla fine dimmi quante chiamate hai fatto.
->
-> Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
-
-### D Una pagina nuova, coerente
-
-Lo stesso prompt lanciato due volte, su due file. Sul file sano produce una pagina coerente in un minuto e dice cosa manca, nel dry run un componente immagine. Sul file caotico si ferma senza scrivere nulla, perché non trova componenti, variabili né stili, e qualsiasi pagina sarebbe fatta di valori copiati. Cambia solo il file.
-
-> Nel file [URL] crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
->
-> Un frame 1440 in auto layout. Nav in alto, poi immagine grande a sinistra e a destra titolo, descrizione, prezzo e bottone "Aggiungi", poi una sezione di tre feature, poi il footer. Usa solo i componenti della pagina "Components", le variabili e gli stili di testo del file. Nessun colore, spazio, carattere o forma che non esista già nel file. Se ti serve qualcosa che non c'è, non inventarla, dimmelo.
->
-> Non spiegarmi come farlo, eseguilo. Alla fine dimmi quali componenti hai usato e quante chiamate hai fatto.
->
-> Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
-
 ## Modifiche
 
+- 2026-09-17, chat 02.5 WS, versione 03. Dal giro con Antonia. Prompt rinumerati in progressione da P1 a P7, al posto di 0.3, 0.5, 1, 2, 3A, 3B, 4. P3 con i cinque valori della landing già scritti, il brief e i valori a mano restano come strade da studio. Prompt della demo spostati in `demo.md` e nella pagina /demo, con l'avviso di non lanciarli sul piano gratuito.
 - 2026-09-17, chat 02.4 WS, versione 02. Dal dry run. 0.3 con whoami. URL solo nel primo prompt di ogni chat. Nota sull'errore di accesso in modifica. Prompt 1 con il brief, la versione a mano come strada lunga. Nomi in inglese e layer di testo nel prompt 2. Prompt a blocchi con la riga sugli strumenti come suffisso. Tetto Starter di venti chiamate al mese che conta anche use_figma, prompt stretti a una chiamata. Aggiunte la quarta mossa per casa e la sezione con i prompt della demo R, S, D. Quattro cardini in apertura.
 - 2026-09-16, chat 02.3 WS, versione 01. Prima versione, prompt 0.3, 0.5, 1, 2, 3A, 3B.
