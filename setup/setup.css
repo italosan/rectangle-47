@@ -1,9 +1,13 @@
 /* Setup page. Only custom properties from style.css, no new values. */
 
 html { scroll-padding-top: calc(var(--space-xxl) + var(--space-s)); }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
 .nav { position: sticky; top: 0; background: var(--surface-primary); z-index: 1; }
 .nav .brand { text-decoration: none; color: var(--text-primary); }
+.nav .brand:hover { color: var(--accent); }
 
 .setup-block { display: flex; flex-direction: column; gap: var(--space-l); padding: var(--space-xxl); border-top: 1px solid var(--border-default); }
 .setup-block .title { font: var(--type-heading); letter-spacing: -0.5px; }
