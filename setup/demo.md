@@ -5,19 +5,22 @@ PUG Bari, 20 settembre 2026. Italo Sannino, italosannino.com
 
 Sette prompt, da D1 a D7, sulla landing intera. Si parte dal file caotico, senza niente, e si arriva a un file che un lettore sa usare per costruire una pagina nuova. D1 e D2 sono i P3 e P4 dei partecipanti. Cambiano solo il file e il nome della pagina.
 
+L'URL del file va solo nel primo prompt di ogni chat. Quindi nel D1, e nel D7 che apre una chat nuova. Da D2 a D6 si scrive "nello stesso file".
+
 Non lanciateli sul piano gratuito di Figma. Da soli consumano le venti chiamate del mese.
 
 ## I file
 
-- `landing-demo`. Un Duplicate di `landing-c`, fatto prima di ogni giro. Una sola pagina, "Home", nessuna variabile, nessuno stile, nessun componente. Da D1 a D6 si lavora qui, in una chat sola.
-- `landing-c`. Il caotico pulito. Non si tocca mai. Serve solo al D7, in una chat nuova.
-- Riserva. `landing-b` con i vecchi R, S, D, in fondo a questa pagina.
+- `landing-work`. Un Duplicate di `landing-start`, fatto prima di ogni giro, usa e getta. Una sola pagina, "Home", nessuna variabile, nessuno stile, nessun componente. Da D1 a D6 si lavora qui, in una chat sola. È l'unico file su cui si scrive.
+- `landing-start`. Il caotico. Non si scrive mai. Serve al D7, in una chat nuova.
+- `rectangle47-end`. Il file completo, sorgente della libreria. Non si tocca e la demo non lo legge mai.
+- Riserva. I vecchi R, S, D su una copia di `rectangle47-end` senza le pagine Styleguide, Rework e Product, in fondo a questa pagina.
 
 ## Primo tempo. Quello che avete fatto voi
 
 ### D1 Variabili. È il vostro P3
 
-> Nel file [URL di landing-demo] crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità.
+> Nel file [URL di landing-work] crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità.
 >
 > Dentro metti cinque variabili colore con questi nomi e questi valori. surface/primary #FFFFFF, surface/secondary #EFEAE1, text/primary #1A1917, text/secondary #6B675F, accent #D63A0E.
 >
@@ -85,9 +88,9 @@ Nessun colore, spazio o stile detto a Claude, solo "quelli che ci sono".
 
 ### D6 Una pagina nuova, coerente
 
-Nella stessa chat, con l'URL di `landing-demo` scritto di nuovo. Così il D6 e il D7 sono lo stesso prompt, parola per parola, e cambia solo l'indirizzo.
+Nella stessa chat, senza URL. Il file è quello del D1.
 
-> Nel file [URL] crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
+> Nello stesso file crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
 >
 > Un frame 1440 in auto layout. Nav in alto, poi immagine grande a sinistra e a destra titolo, descrizione, prezzo e bottone "Aggiungi", poi una sezione di tre feature, poi il footer. Usa solo i componenti della pagina "Components", le variabili e gli stili di testo del file. Nessun colore, spazio, carattere o forma che non esista già nel file. Se ti serve qualcosa che non c'è, non inventarla, dimmelo.
 >
@@ -97,7 +100,15 @@ Nella stessa chat, con l'URL di `landing-demo` scritto di nuovo. Così il D6 e i
 
 ### D7 Lo stesso prompt, sul file caotico
 
-Chat nuova. Il prompt è il D6, con l'URL di `landing-c`.
+Chat nuova, quindi l'URL va scritto. Il prompt è il D6, cambia solo l'attacco, "Nel file [URL]" al posto di "Nello stesso file".
+
+> Nel file [URL di landing-start] crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
+>
+> Un frame 1440 in auto layout. Nav in alto, poi immagine grande a sinistra e a destra titolo, descrizione, prezzo e bottone "Aggiungi", poi una sezione di tre feature, poi il footer. Usa solo i componenti della pagina "Components", le variabili e gli stili di testo del file. Nessun colore, spazio, carattere o forma che non esista già nel file. Se ti serve qualcosa che non c'è, non inventarla, dimmelo.
+>
+> Non spiegarmi come farlo, eseguilo. Alla fine dimmi quali componenti hai usato e quante chiamate hai fatto.
+>
+> Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.
 
 Due esiti, tutti e due buoni. Se inventa, è il lettore che perdona, e perdonando inventa. Se si ferma, con Rectangle 47 anche il lettore migliore si ferma, e non è colpa sua. Nel dry run del 17 settembre si è fermato e ha scritto "qualsiasi pagina costruissi adesso sarebbe fatta di valori copiati dalla Home, cioè esattamente ciò che mi hai detto di non fare".
 
@@ -115,10 +126,11 @@ Da misurare nella prova del 18 settembre. Tetto, dodici minuti di macchina in tu
 | D6 | | | |
 | D7 | | | |
 
-## Riserva. R, S, D su `landing-b`
+## Riserva. R, S, D su una copia di `rectangle47-end`
 
-I tre prompt provati nel dry run del 17 settembre, 6:20 di macchina. Richiedono un file con il design system già fatto e la pagina "Home" come riferimento. Stanno nella versione 02 di `il-metodo.md`, sezione "Cosa ha fatto Italo", e restano validi così come sono.
+I tre prompt provati nel dry run del 17 settembre, 6:20 di macchina. Richiedono un file con il design system già fatto e la pagina "Home" come riferimento, quindi una copia di `rectangle47-end` senza Styleguide, Rework e Product, con un nome neutro. Stanno nella versione 02 di `il-metodo.md`, sezione "Cosa ha fatto Italo", e restano validi così come sono.
 
 ## Modifiche
 
+- 2026-09-17, chat 02.6 WS, versione 02. URL solo nel primo prompt di ogni chat, senza eccezioni. Il D6 dice "nello stesso file", il D7 è scritto per esteso con il suo URL. Nomi dei file allineati al brief 03, `landing-work` al posto di `landing-demo`, `landing-start` al posto di `landing-c`, riserva su una copia di `rectangle47-end` al posto di `landing-b`.
 - 2026-09-17, chat 02.5 WS, versione 01. Dal giro con Antonia. La demo parte dai prompt dei partecipanti sulla landing intera e cresce da lì. Sette prompt da D1 a D7 al posto di R, S, D. Stili di testo e non variabili tipografiche. Un prompt per i componenti. Nomi di variabili, stili e componenti presi dal file `Rectangle47`. Tempi da misurare il 18.
