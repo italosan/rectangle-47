@@ -12,6 +12,7 @@ Il file di design è il progetto, non la sua immagine. Naming, variabili e strut
 - Niente framework, niente build, niente dipendenze. HTML in `index.html`, CSS in `style.css` collegato con un `<link>` nel `head`.
 - File Figma di riferimento: https://www.figma.com/design/hxR5D1lBxPbEHqsmVZOqXQ/rectangle47 (pagina Home).
 - La pagina setup/ usa solo le custom property di style.css, con i suoi stili in setup/setup.css. È l'unico URL sulle slide, rectangle-47.pages.dev/setup.
+- I prompt in setup/ stanno in due posti, index.html e il-metodo.md, e vanno sempre aggiornati insieme.
 
 
 
