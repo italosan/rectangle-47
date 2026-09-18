@@ -5,11 +5,12 @@ PUG Bari, 20 settembre 2026. Italo Sannino, italosannino.com
 
 Sette prompt, da D1 a D7, sulla landing intera. Si parte dal file caotico, senza niente, e si arriva a un file che un lettore sa usare per costruire una pagina nuova. D1 e D2 sono i vostri P3 e P4. Cambiano solo il file e il nome della pagina.
 
-Non lanciateli sul piano gratuito di Figma. Da soli consumano le venti chiamate del mese.
+Non lanciateli sul piano gratuito di Figma. Da soli consumano le venti chiamate del mese, e sul piano Starter un file ha al massimo tre pagine, mentre la demo ne crea tre oltre a Home. Serve un piano Education o a pagamento.
 
 ## Come si usano
 
-- Non si lavora mai sul file originale. Prima di cominciare fate due Duplicate del file caotico. Una copia di lavoro, per i prompt da D1 a D6. Una copia intatta, solo per il D7. In aula Italo le chiama `landing-work` e `landing-raw`.
+- Il file caotico è su Figma Community, [landing-community](https://www.figma.com/community/file/1682759778269309945/landing-community). Open in Figma e la copia si apre nei vostri Drafts.
+- Non si lavora mai sulla prima copia. Prima di cominciare fatene due Duplicate. Una copia di lavoro, per i prompt da D1 a D6. Una copia intatta, solo per il D7. In aula Italo le chiama `landing-work` e `landing-raw`.
 - Da D1 a D6 si resta nella stessa chat. Il D7 va in una chat nuova, perché il lettore non deve ricordare niente di quello che ha fatto prima.
 - L'URL del file va solo nel primo prompt di ogni chat. Quindi nel D1, e nel D7. Da D2 a D6 si scrive "nello stesso file". L'URL va corto, `figma.com/design/` più la chiave, senza il nome del file e senza i parametri dopo il punto di domanda.
 - Se perdete la chat a metà, aprite una chat nuova e rilanciate il prompt a cui eravate con "Nel file [URL]" al posto di "Nello stesso file". Lo stato sta nel file, non nella chat.
@@ -122,6 +123,7 @@ Due esiti, tutti e due buoni. Se inventa, è il lettore che perdona, e perdonand
 
 ## Modifiche
 
+- 2026-09-18, chat 02.7 WS, versione 05. Il file caotico è pubblicato su Figma Community come `landing-community`, con il link in "Come si usano". Aggiunto in apertura il limite delle tre pagine per file del piano Starter, per cui la demo richiede un piano Education o a pagamento.
 - 2026-09-18, chat 02.6 WS, versione 04. Il file diventa la pagina per i partecipanti, da tenere dopo il workshop. Tolti i nomi dei file di Italo, la sezione dei file, la tabella dei tempi, la rete, l'incognito e le note di regia, che stanno nello script 04 e nel brief 04. Aggiunti "Come si usano" e una riga "Cosa guardare" sotto ogni prompt. Segnaposto degli URL rinominati in copia di lavoro e copia intatta. Esito del D7 senza il racconto della prova, che si aggiunge dopo il 20.
 - 2026-09-18, chat 02.6 WS, versione 03. Dalla prova cronometrata. Tabella dei tempi compilata, 11:11 e 15 chiamate, demo nuova confermata. Aggiunto `landing-raw` per il D7, `landing-start` resta matrice e non ci gira nessun prompt. Chat in incognito sul web. Note "da dire" con le scene della prova. Esito del D7 aggiornato. Tolta la riserva R, S, D, al suo posto la rete. Sezione dei file divisa tra fissi e copie usa e getta.
 - 2026-09-17, chat 02.6 WS, versione 02. URL solo nel primo prompt di ogni chat, senza eccezioni. Il D6 dice "nello stesso file", il D7 è scritto per esteso con il suo URL. Nomi dei file allineati al brief 03, `landing-work` al posto di `landing-demo`, `landing-start` al posto di `landing-c`, riserva su una copia di `rectangle47-end` al posto di `landing-b`.
