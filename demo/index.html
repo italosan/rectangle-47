@@ -22,41 +22,41 @@
 
   <section class="hero">
     <h1 class="headline">La demo. Stesso metodo, una pagina intera.</h1>
-    <p class="lead">Sette prompt, da D1 a D7, sulla landing intera. Si parte dal file caotico, senza niente, e si arriva a un file che un lettore sa usare per costruire una pagina nuova. Non lanciateli sul piano gratuito di Figma. Da soli consumano le venti chiamate del mese.</p>
-    <p class="lead">L'URL del file va solo nel primo prompt di ogni chat. Quindi nel D1, e nel D7 che apre una chat nuova. Da D2 a D6 si scrive "nello stesso file".</p>
+    <p class="lead">Sette prompt, da D1 a D7, sulla landing intera. Si parte dal file caotico, senza niente, e si arriva a un file che un lettore sa usare per costruire una pagina nuova. D1 e D2 sono i vostri P3 e P4. Cambiano solo il file e il nome della pagina.</p>
+    <p class="lead">Non lanciateli sul piano gratuito di Figma. Da soli consumano le venti chiamate del mese.</p>
   </section>
 
-  <section class="setup-block" id="file">
-    <h2 class="title">I file</h2>
+  <section class="setup-block" id="uso">
+    <h2 class="title">Come si usano</h2>
     <ol class="step-list">
       <li class="step">
-        <h3 class="step-title">landing-work</h3>
-        <p class="step-body">Un Duplicate di landing-start, fatto prima di ogni giro, usa e getta. Una sola pagina, "Home", nessuna variabile, nessuno stile, nessun componente. Da D1 a D6 si lavora qui, in una chat sola. È l'unico file su cui si scrive.</p>
+        <p class="step-body">Non si lavora mai sul file originale. Prima di cominciare fate due Duplicate del file caotico. Una copia di lavoro, per i prompt da D1 a D6. Una copia intatta, solo per il D7. In aula Italo le chiama landing-work e landing-raw.</p>
       </li>
       <li class="step">
-        <h3 class="step-title">landing-start</h3>
-        <p class="step-body">Il caotico. Non si scrive mai. Serve al D7, in una chat nuova.</p>
+        <p class="step-body">Da D1 a D6 si resta nella stessa chat. Il D7 va in una chat nuova, perché il lettore non deve ricordare niente di quello che ha fatto prima.</p>
       </li>
       <li class="step">
-        <h3 class="step-title">rectangle47-end</h3>
-        <p class="step-body">Il file completo, sorgente della libreria. Non si tocca e la demo non lo legge mai.</p>
+        <p class="step-body">L'URL del file va solo nel primo prompt di ogni chat. Quindi nel D1, e nel D7. Da D2 a D6 si scrive "nello stesso file". L'URL va corto, figma.com/design/ più la chiave, senza il nome del file e senza i parametri dopo il punto di domanda.</p>
       </li>
       <li class="step">
-        <h3 class="step-title">Riserva</h3>
-        <p class="step-body">I vecchi R, S, D su una copia di rectangle47-end senza le pagine Styleguide, Rework e Product, in fondo a questa pagina.</p>
+        <p class="step-body">Se perdete la chat a metà, aprite una chat nuova e rilanciate il prompt a cui eravate con "Nel file [URL]" al posto di "Nello stesso file". Lo stato sta nel file, non nella chat.</p>
+      </li>
+      <li class="step">
+        <p class="step-body">L'ultima riga di ogni prompt resta sempre.</p>
+      </li>
+      <li class="step">
+        <p class="step-body">Dopo ogni prompt aprite il file e guardate. Sotto ogni prompt c'è scritto cosa.</p>
       </li>
     </ol>
   </section>
 
   <section class="setup-block" id="primo">
     <h2 class="title">Primo tempo. Quello che avete fatto voi</h2>
-    <p class="body">D1 e D2 sono i vostri P3 e P4. Cambiano solo il file e il nome della pagina. Da D1 a D6 si lavora in una chat sola, su landing-work.</p>
     <ol class="step-list">
       <li class="step">
         <h3 class="step-title">D1 Variabili. È il vostro P3</h3>
-        <p class="step-body">Cinque variabili bastano a una card. A una pagina no. Guardate cosa ha lasciato fuori, la fascia scura e i filetti. Il sistema cresce quando il progetto lo chiede.</p>
         <div class="prompt">
-          <pre class="prompt-text">Nel file [URL di landing-work] crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità.
+          <pre class="prompt-text">Nel file [URL della copia di lavoro] crea tu, usando gli strumenti Figma, una collezione di variabili chiamata "color" con una sola modalità.
 
 Dentro metti cinque variabili colore con questi nomi e questi valori. surface/primary #FFFFFF, surface/secondary #EFEAE1, text/primary #1A1917, text/secondary #6B675F, accent #D63A0E.
 
@@ -67,10 +67,10 @@ Non spiegarmi come farlo a mano, eseguilo in una sola chiamata. Alla fine dimmi 
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Quanti fill ha legato e quali ha lasciato fuori. Cinque variabili bastano a una card. A una pagina no. Il sistema cresce quando il progetto lo chiede.</p>
       </li>
       <li class="step">
         <h3 class="step-title">D2 Nomi. È il vostro P4</h3>
-        <p class="step-body">Le stesse forme di prima, ma ora si leggono.</p>
         <div class="prompt">
           <pre class="prompt-text">Nello stesso file, nella pagina "Home", rinomina tutti i layer che hanno ancora un nome di default, tipo Rectangle, Frame, Text, Ellipse, Group, compresi i layer di testo il cui nome coincide con il contenuto, che vanno chiamati per ruolo, per esempio title, description, price, label.
 
@@ -81,6 +81,7 @@ Esegui direttamente con gli strumenti Figma, in una sola chiamata. Alla fine ele
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Il pannello Layers. Le stesse forme di prima, ma ora si leggono. E leggete cosa vi segnala sulla struttura, il lettore vede come è fatto il file, non come appare.</p>
       </li>
     </ol>
   </section>
@@ -91,7 +92,6 @@ Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata,
     <ol class="step-list">
       <li class="step">
         <h3 class="step-title">D3 Il vocabolario completo e l'auto layout</h3>
-        <p class="step-body">La tipografia è la prima struttura di lettura, e adesso ha un nome. L'auto layout dice come sta una cosa rispetto alle altre. Senza, il lettore copia le coordinate.</p>
         <div class="prompt">
           <pre class="prompt-text">Nello stesso file, nella pagina "Home", completa il design system e metti ordine nella struttura, usando gli strumenti Figma.
 
@@ -104,10 +104,10 @@ Non spiegarmi come farlo, eseguilo. Alla fine dimmi quante variabili hai creato,
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Il pannello Local variables, gli stili di testo, e il pannello Layers della card. La tipografia è la prima struttura di lettura, e adesso ha un nome. L'auto layout dice come sta una cosa rispetto alle altre. Senza, il lettore copia le coordinate.</p>
       </li>
       <li class="step">
         <h3 class="step-title">D4 I componenti</h3>
-        <p class="step-body">Il pannello Layers di Home, con i rombi viola delle istanze. Il quarto cardine.</p>
         <div class="prompt">
           <pre class="prompt-text">Nello stesso file crea una pagina nuova chiamata "Components" e trasforma in componenti i pezzi della pagina "Home" che si ripetono o che servirebbero in un'altra pagina, usando gli strumenti Figma.
 
@@ -118,6 +118,7 @@ La pagina "Home" deve restare identica a prima a guardarla. Non spiegarmi come f
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Il pannello Layers di Home, con i rombi viola delle istanze. Tre feature, un componente solo. I nomi dei componenti sono quelli del prompt, non quelli che il lettore aveva scelto al D2. Nel sistema vive una convenzione sola.</p>
       </li>
     </ol>
   </section>
@@ -128,7 +129,6 @@ Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata,
     <ol class="step-list">
       <li class="step">
         <h3 class="step-title">D5 La styleguide, letta dal design system</h3>
-        <p class="step-body">Nessun colore, spazio o stile detto a Claude, solo "quelli che ci sono".</p>
         <div class="prompt">
           <pre class="prompt-text">Nello stesso file crea una pagina nuova chiamata "Styleguide" e costruiscila usando gli strumenti Figma.
 
@@ -141,6 +141,7 @@ Non spiegarmi come farlo, eseguilo. Alla fine dimmi quante chiamate hai fatto.
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Se nella pagina c'è qualcosa scritto a mano. E se c'è, se il lettore lo ha dichiarato.</p>
       </li>
       <li class="step">
         <h3 class="step-title">D6 Una pagina nuova, coerente</h3>
@@ -155,12 +156,13 @@ Non spiegarmi come farlo, eseguilo. Alla fine dimmi quali componenti hai usato e
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
+        <p class="step-note">Cosa guardare. Quali componenti ha usato, e soprattutto cosa dice che manca. Con un file che si lascia leggere, il lettore sa anche cosa non c'è.</p>
       </li>
       <li class="step">
         <h3 class="step-title">D7 Lo stesso prompt, sul file caotico</h3>
-        <p class="step-body">Chat nuova, quindi l'URL va scritto. Il prompt è il D6, cambia solo l'attacco, "Nel file [URL]" al posto di "Nello stesso file".</p>
+        <p class="step-body">Chat nuova, quindi l'URL va scritto. Il file è la copia intatta. Il prompt è il D6, cambia solo l'attacco, "Nel file [URL]" al posto di "Nello stesso file".</p>
         <div class="prompt">
-          <pre class="prompt-text">Nel file [URL di landing-start] crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
+          <pre class="prompt-text">Nel file [URL della copia intatta] crea una pagina nuova chiamata "Product" con la pagina di dettaglio del prodotto che sta nella card della pagina "Home", usando gli strumenti Figma.
 
 Un frame 1440 in auto layout. Nav in alto, poi immagine grande a sinistra e a destra titolo, descrizione, prezzo e bottone "Aggiungi", poi una sezione di tre feature, poi il footer. Usa solo i componenti della pagina "Components", le variabili e gli stili di testo del file. Nessun colore, spazio, carattere o forma che non esista già nel file. Se ti serve qualcosa che non c'è, non inventarla, dimmelo.
 
@@ -169,7 +171,7 @@ Non spiegarmi come farlo, eseguilo. Alla fine dimmi quali componenti hai usato e
 Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata, get_screenshot o get_variable_defs.</pre>
           <button class="button button-secondary prompt-copy" type="button">Copia</button>
         </div>
-        <p class="step-check">Due esiti, tutti e due buoni. Se inventa, è il lettore che perdona, e perdonando inventa. Se si ferma, con Rectangle 47 anche il lettore migliore si ferma, e non è colpa sua. Nel dry run del 17 settembre si è fermato e ha scritto "qualsiasi pagina costruissi adesso sarebbe fatta di valori copiati dalla Home, cioè esattamente ciò che mi hai detto di non fare".</p>
+        <p class="step-note">Due esiti, tutti e due buoni. Se inventa, è il lettore che perdona, e perdonando inventa. Se si ferma, con Rectangle 47 anche il lettore migliore si ferma, e non è colpa sua. Confrontate la risposta con quella del D6. Stesso prompt, stesso lettore. La differenza è il file.</p>
       </li>
     </ol>
   </section>
@@ -177,11 +179,6 @@ Leggi il file usando solo use_figma. Non usare get_design_context, get_metadata,
   <section class="band-quote">
     <p class="quote">Il valore non è nel codice. È nel criterio.</p>
     <p class="source">Rectangle 47. Il lettore che non perdona</p>
-  </section>
-
-  <section class="setup-block" id="riserva">
-    <h2 class="title">Riserva. R, S, D su una copia di rectangle47-end</h2>
-    <p class="body">I tre prompt provati nel dry run del 17 settembre, 6:20 di macchina. Richiedono un file con il design system già fatto e la pagina "Home" come riferimento, quindi una copia di rectangle47-end senza Styleguide, Rework e Product, con un nome neutro. Stanno nella versione 02 di il-metodo.md, sezione "Cosa ha fatto Italo", e restano validi così come sono.</p>
   </section>
 
   <footer class="footer">
